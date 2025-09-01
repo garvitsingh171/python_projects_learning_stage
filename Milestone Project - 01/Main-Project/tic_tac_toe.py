@@ -13,6 +13,7 @@ print("   |   |   ")
 print(" 1 | 2 | 3 ")
 print("   |   |   \n")
 print("Press these numeric values whenever you asked to choose the position of your X/O for the respective positions. \n")
+
 # The function to print board of Tic-Tac-Toe Game
 def print_board(board):
     print("Your Board")
@@ -27,3 +28,13 @@ def print_board(board):
     print(f" {board[1]} | {board[2]} | {board[3]} ")
     print("   |   |   \n")
 print_board([])
+
+# Function to ask player_a what he/she wants to choose
+def user_choice(sign):
+    sign = input("Choose a sign you want to take 'X' or 'O': ")
+    if sign == 'X' or sign == 'x':
+        sign = 'X'
+    elif sign == 'O' or sign == 'o':
+        sign = 'O'
+    print("You choosed",sign,)
+user_choice([])
