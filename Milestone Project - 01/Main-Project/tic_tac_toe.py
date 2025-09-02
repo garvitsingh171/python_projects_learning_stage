@@ -36,5 +36,15 @@ def user_choice(sign):
         sign = 'X'
     elif sign == 'O' or sign == 'o':
         sign = 'O'
-    print("You choosed",sign,)
+    # print("You choosed",sign)
+    if sign == 'X':
+        player_1 = 'X'
+        player_2 = 'O'
+    else:
+        player_1 = 'O'
+        player_2 = 'X'
+    print("Player-1 is",player_1)
+    print("Player-2 is",player_2)
 user_choice([])
+
+# 
