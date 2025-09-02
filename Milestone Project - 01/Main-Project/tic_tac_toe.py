@@ -15,7 +15,7 @@ print("   |   |   \n")
 print("Press these numeric values whenever you asked to choose the position of your X/O for the respective positions. \n")
 
 # The function to print board of Tic-Tac-Toe Game
-def print_board(board):
+def print_board():
     print("Your Board")
     board = [' ',' ',' ',' ',' ',' ',' ',' ',' ',' ']
     print("\n   |   |   ")
@@ -27,24 +27,49 @@ def print_board(board):
     print("   |   |   ")
     print(f" {board[1]} | {board[2]} | {board[3]} ")
     print("   |   |   \n")
-print_board([])
+print_board()
 
 # Function to ask player_a what he/she wants to choose
-def user_choice(sign):
-    sign = input("Choose a sign you want to take 'X' or 'O': ")
-    if sign == 'X' or sign == 'x':
-        sign = 'X'
-    elif sign == 'O' or sign == 'o':
-        sign = 'O'
-    # print("You choosed",sign)
-    if sign == 'X':
-        player_1 = 'X'
-        player_2 = 'O'
-    else:
-        player_1 = 'O'
-        player_2 = 'X'
+def user_choice():
+    while True:
+        sign = input("Choose a sign you want to take 'X' or 'O': ")
+        if sign == 'X' or sign == 'x':
+            sign = 'X'
+        elif sign == 'O' or sign == 'o':
+            sign = 'O'
+        else:
+            print("Invalid Input! Please press key which is asked to press.")
+        if sign == 'X':
+            player_1 = 'X'
+            player_2 = 'O'
+            break
+        elif sign == 'Y':
+            player_1 = 'O'
+            player_2 = 'X'
+            break
+        else:
+            print('')
     print("Player-1 is",player_1)
     print("Player-2 is",player_2)
-user_choice([])
+user_choice()
 
-# 
+# Function to choose the first chance
+def user_want():
+    global current_player
+    while True:
+        want = input("Player-1, do you want to start or pass to player-2 (Enter 'P' if you want to pass or 'N' if you not):")
+        if want == 'P' or want == 'p':
+            current_player = 1
+            print("Player-1 goes first")
+            break
+        elif want == 'N' or want == 'n':
+            current_player = 2
+            print("Player-2 goes first")
+            break
+        else:
+            print("Invalid Input! Please press key which is asked to press.")
+user_want()
+
+
+# Main Function: To ask users to choose positions
+# def user_position(num):
