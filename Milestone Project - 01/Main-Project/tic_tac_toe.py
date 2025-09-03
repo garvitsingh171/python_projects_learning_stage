@@ -35,20 +35,22 @@ def user_choice():
         sign = input("Choose a sign you want to take 'X' or 'O': ")
         if sign == 'X' or sign == 'x':
             sign = 'X'
+            break
         elif sign == 'O' or sign == 'o':
             sign = 'O'
+            break
         else:
             print("Invalid Input! Please press key which is asked to press.")
-        if sign == 'X':
-            player_1 = 'X'
-            player_2 = 'O'
-            break
-        elif sign == 'Y':
-            player_1 = 'O'
-            player_2 = 'X'
-            break
-        else:
-            print('')
+    if sign == 'X':
+        player_1 = 'X'
+        player_2 = 'O'
+        # break
+    elif sign == 'Y':
+        player_1 = 'O'
+        player_2 = 'X'
+        # break
+    else:
+        print('')
     print("Player-1 is",player_1)
     print("Player-2 is",player_2)
 user_choice()
@@ -57,8 +59,8 @@ user_choice()
 def user_want():
     global current_player
     while True:
-        want = input("Player-1, do you want to start or pass to player-2 (Enter 'P' if you want to pass or 'N' if you not):")
-        if want == 'P' or want == 'p':
+        want = input("Player-1, do you want to start first (Y/N): ")
+        if want == 'Y' or want == 'y':
             current_player = 1
             print("Player-1 goes first")
             break
@@ -70,6 +72,12 @@ def user_want():
             print("Invalid Input! Please press key which is asked to press.")
 user_want()
 
+# user = user_want()
+# if user == 1:
+#     print("Player-1")
+
 
 # Main Function: To ask users to choose positions
 # def user_position(num):
+#     choice_bucket = [1,2,3,4,5,6,7,8,9]
+#     choice = int(input(f"Enter the position of your {}"))
