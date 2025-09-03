@@ -72,9 +72,13 @@ def user_want():
             print("Invalid Input! Please press key which is asked to press.")
 user_want()
 
-# user = user_want()
-# if user == 1:
-#     print("Player-1")
+user = user_want()
+if user == 1:
+    current_player
+elif user == 2:
+    current_player
+else:
+    print("Aap paida hone se pahele hi mar gaye")
 
 
 # Main Function: To ask users to choose positions
