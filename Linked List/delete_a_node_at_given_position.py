@@ -18,9 +18,20 @@ node5.next = node6
 
 current = node1
 
-node3.next = node5
+# node3.next = node5
+
+# while current is not None:
+#     print(current.data, end=' -> ')
+#     current = current.next
+# print(None)
+
+count = 0
 
 while current is not None:
-    print(current.data, end=' -> ')
-    current = current.next
+    if count != 3:
+        print(current.data, end=' -> ')
+        current = current.next
+    else:
+        current.next = current.next.next
+    count += 1
 print(None)
