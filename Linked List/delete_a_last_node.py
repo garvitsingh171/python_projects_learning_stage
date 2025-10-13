@@ -18,13 +18,10 @@ node4.next = node5
 node5.next = node6
 
 current = node1
-previous = None
 
-while current.next is not None:
+while current is not None:
+    if current.next.next == None:
+        current.next = None
     print(current.data, end=' -> ')
-    if current.next == None:
-        previous = current.next
-    else:
-        previous = current
-        current = current.next
+    current = current.next
 print(None)
