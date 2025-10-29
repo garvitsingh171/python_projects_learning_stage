@@ -39,3 +39,4 @@ mystack.top()
 
 print(mystack.stack)
 print(mystack.top())
+print(mystack.isEmpty())
